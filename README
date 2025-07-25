@@ -1,0 +1,18 @@
+Custom heap allocator with dynamic memory pools.
+
+This is not meant for production-grade applications.
+YAGNI and KISS principles were followed in this project.
+
+Features:
+  - mmap-based memory pools (min 1MB)
+  - Best-fit allocation strategy
+  - Block splitting and coalescing
+  - Thread-safe using pthread mutex
+  - 8-byte alignment for performance
+
+Build:
+  $ cmake 
+  $ make
+
+How to use
+use LD_PRELOAD to load valloc
